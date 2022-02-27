@@ -13,13 +13,13 @@ terraform {
 module "rg_mod" {
   source = "./rg"
   rg_id = module.aks_mod.rg_id
-  rg_id = module.aks_mod.rg_name
+  rg_name = module.aks_mod.rg_name
 }
 
 module "aks_mod" {
   source = "./aks"
   rg_id = module.aks_mod.rg_id
-  rg_id = module.aks_mod.rg_name
+  rg_name = module.aks_mod.rg_name
 }
 
 module "acr_mod" {
