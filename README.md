@@ -25,5 +25,5 @@ K8
 # ├── terraform.tfvars
 # └── vars.tf
 
-** 3 directories, 15 files **
+__3 directories, 15 files__
 
