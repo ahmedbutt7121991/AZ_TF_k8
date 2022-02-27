@@ -6,8 +6,8 @@ K8
 ## REPO TREE
 
 # .
-# ├── LICENSE
-# ├── README.md
+**├── LICENSE**
+**├── README.md**
 # ├── acr
 # │   ├── main.tf
 # │   ├── output.tf
@@ -26,4 +26,5 @@ K8
 # └── vars.tf
 
 __3 directories, 15 files__
+:smiley:
 
