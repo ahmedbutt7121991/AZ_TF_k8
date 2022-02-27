@@ -5,9 +5,9 @@ K8
 
 ## REPO TREE
 
-# .
-**├── LICENSE**
-**├── README.md**
+### .
+### **├── LICENSE**
+### **├── README.md**
 # ├── acr
 # │   ├── main.tf
 # │   ├── output.tf
