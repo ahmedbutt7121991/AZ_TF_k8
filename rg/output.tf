@@ -5,3 +5,7 @@ output "rg_id" {
 output "rg_name" {
   value = azurerm_resource_group.rg_az_k8.name
 }
+
+output "rg_location" {
+  value = azurerm_resource_group.rg_az_k8.location
+}

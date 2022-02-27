@@ -1,7 +1,7 @@
-resource "azurerm_kubernetes_cluster" "kube_cluster_1" {
+resource "azurerm_kubernetes_cluster" "kc_az_k8" {
   name                = var.name
-  location            = azurerm_resource_group.azure_rg_kube.location
-  resource_group_name = azurerm_resource_group.azure_rg_kube.name
+  location            = var.rg_location
+  resource_group_name = var.rg_name
   dns_prefix          = var.dns_prefix
 
   default_node_pool {
@@ -17,4 +17,11 @@ resource "azurerm_kubernetes_cluster" "kube_cluster_1" {
   tags = {
     Environment = var.env_tag
   }
+}
+
+resource "azurerm_role_assignment" "ra_az_k8" {
+  principal_id                     = azurerm_kubernetes_cluster.kc_az_k8.kubelet_identity[0].object_id
+  role_definition_name             = "AcrPull"
+  scope                            = var.rc_id
+  skip_service_principal_aad_check = true
 }

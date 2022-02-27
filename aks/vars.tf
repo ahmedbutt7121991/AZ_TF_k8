@@ -22,3 +22,9 @@ variable env_tag {
 variable role_name {
   default = "CR_Rules"
 }
+
+variable rc_id {}
+
+variable rg_name {}
+
+variable rg_location {}

@@ -1,5 +1,5 @@
-resource "azurerm_container_registry" "azure_rg_kube" {
+resource "azurerm_container_registry" "rc_az_k8" {
   name                = var.name
-  resource_group_name = azurerm_resource_group.azure_rg_kube.name
-  location            = azurerm_resource_group.azure_rg_kube.location
+  resource_group_name = var.rg_name
+  location            = var.rg_location
 }

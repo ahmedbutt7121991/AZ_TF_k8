@@ -1,5 +1,7 @@
 variable rg_id {}
 variable rg_name {}
+variable rg_location {}
+
 variable name {
   default = "resourcegroup_az_k8"
 }
