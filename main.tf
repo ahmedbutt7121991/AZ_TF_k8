@@ -7,23 +7,23 @@ terraform {
   }
 }
 
-module "rg_mod" {
+module "arg_mod" {
   source = "./rg"
-  rg_id = module.rg_mod.rg_id
-  rg_name = module.rg_mod.rg_name
-  rg_location = module.rg_mod.rg_location
+  rg_id = module.arg_mod.rg_id
+  rg_name = module.arg_mod.rg_name
+  rg_location = module.arg_mod.rg_location
 }
 
 module "aks_mod" {
   source = "./aks"
-  rg_name = module.rg_mod.rg_name
-  rg_location = module.rg_mod.rg_location
-  rc_id = module.rc_mod.rc_id
+  rg_name = module.arg_mod.rg_name
+  rg_location = module.arg_mod.rg_location
+  rc_id = module.rc_mod.arc_id
 }
 
 module "acr_mod" {
   source = "./acr"
-  rc_id = module.rc_mod.rc_id
-  rg_name = module.rg_mod.rg_name
-  rg_location = module.rg_mod.rg_location
+  rc_id = module.arc_mod.rc_id
+  rg_name = module.arg_mod.rg_name
+  rg_location = module.arg_mod.rg_location
 }
